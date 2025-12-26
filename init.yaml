@@ -1,0 +1,5 @@
+version: 0.0.1
+folder_path: plugins/anime_library_scanner_plugin
+type: plugin
+requirements: []
+repo_url: https://github.com/YMHY-life/anime_library_scanner_plugin.git
