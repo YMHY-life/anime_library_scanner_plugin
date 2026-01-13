@@ -1,0 +1,23 @@
+[project]
+name = "anime-library-scanner-plugin"
+version = "0.1.0"
+description = "ADHD Framework plugin: anime_library_scanner_plugin"
+requires-python = ">=3.11"
+dependencies = [
+    "external-media-manager",
+    "logger-util",
+    "cli-manager",
+    "anitopy>=2.1.1",
+]
+
+[tool.adhd]
+type = "plugin"
+layer = "runtime"
+
+[tool.uv.sources]
+external-media-manager = { workspace = true }
+logger-util = { workspace = true }
+cli-manager = { workspace = true }
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

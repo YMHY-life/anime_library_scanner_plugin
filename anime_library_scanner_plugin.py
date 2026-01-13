@@ -6,7 +6,7 @@ anime metadata from discovered media files using the anitopy library.
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Callable, Optional
 
 from plugins.anime_library_scanner_plugin.models import ParsedAnimeFile
 from utils.logger_util import Logger
@@ -48,7 +48,7 @@ class AnimeLibraryScannerPlugin:
 
         # User-configurable callback for parsed files
         self.on_parsed: Optional[
-            "callable[[MediaEvent, ParsedAnimeFile], None]"
+            Callable[["MediaEvent", ParsedAnimeFile], None]
         ] = None
 
         if not ANITOPY_AVAILABLE:
